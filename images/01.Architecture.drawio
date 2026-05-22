@@ -1,0 +1,182 @@
+<mxfile host="65bd71144e">
+    <diagram id="todo-mgmt-v2" name="Page-1">
+        <mxGraphModel dx="1719" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+
+                <mxCell id="title" value="&lt;b&gt;Todo Management v2 — Azure Functions + Cosmos DB + AI Foundry&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="20" width="840" height="30" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="azureBoundary" value="&lt;b&gt;Azure Subscription&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2;dashed=1;fillColor=none;strokeColor=#0078D4;strokeWidth=2;verticalAlign=top;fontColor=#0078D4;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="80" width="1140" height="780" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="user" value="End User" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Users.svg;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="380" width="64" height="70" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="entraGroup" value="&lt;b&gt;Identity (Microsoft Entra ID)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="120" width="380" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="spaApp" value="SPA App Registration&#10;(User.Read, Calendars.Read)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/identity/App_Registrations.svg;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="160" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="msi" value="Function App&#10;Managed Identity" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/identity/Managed_Identities.svg;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="160" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="graphApp" value="Graph App Registration&#10;(reserved)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/identity/App_Registrations.svg;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="160" width="56" height="56" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="frontGroup" value="&lt;b&gt;Frontend&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="280" width="240" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="swa" value="Azure Static Web Apps&#10;(Vue 3 + Vite SPA)&#10;Pages: Todos / Edit /&#10;Projects / Project Graph" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/app_services/Static_Apps.svg;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="320" width="64" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="msal" value="@azure/msal-browser&#10;(Auth Code + PKCE)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/security/Identity.svg;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="320" width="64" height="70" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="apiGroup" value="&lt;b&gt;Backend API&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="280" width="320" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="funcApp" value="Azure Functions&#10;(Python 3.11, Linux Y1)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/compute/Function_Apps.svg;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="320" width="64" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="storage" value="Storage Account&#10;(AzureWebJobs)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/storage/Storage_Accounts.svg;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="320" width="64" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="appsvcPlan" value="Consumption Plan" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/app_services/App_Service_Plans.svg;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="320" width="64" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="routes" value="Routes:&#10;/health  /todos  /todos/{id}&#10;/projects  /owners  /generate-todos&#10;/tools/estimate-hours&#10;/chat  /conversations&#10;/graph/related" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#82b366;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="400" width="280" height="90" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="dataGroup" value="&lt;b&gt;Data&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="280" width="440" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="cosmos" value="Azure Cosmos DB (Serverless)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/databases/Azure_Cosmos_DB.svg;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="320" width="64" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="sqlDb" value="SQL: todo-db&#10;todos / owners /&#10;projects / conversations" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#d6b656;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="310" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="gremlinDb" value="Gremlin: todo-graph-db&#10;graph todo-graph&#10;edges: BLOCKED_BY,&#10;PRECEDES, SUBTASK_OF,&#10;SIMILAR_TO" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#d6b656;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1190" y="310" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="vector" value="Vector field: embedding[]&#10;(text-embedding-3-small)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#d6b656;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="410" width="240" height="60" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="aiGroup" value="&lt;b&gt;AI Services&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="540" width="800" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="openai" value="Azure OpenAI&#10;gpt-4o-mini&#10;text-embedding-3-small" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/ai_machine_learning/Azure_OpenAI.svg;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="600" width="64" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="foundry" value="Azure AI Foundry Project&#10;(AIProjectClient + agent_reference)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/ai_machine_learning/Machine_Learning.svg;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="600" width="64" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="agent" value="Foundry Agent&#10;Built-in tools:&#10; • Microsoft Graph (Calendar)&#10; • Cosmos DB (SQL + Gremlin)&#10;Custom REST tool:&#10; • estimate_hours&#10;Server-side conversations" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#9673a6;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="580" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="msgraph" value="Microsoft Graph API&#10;(Calendar, via Foundry tool)" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/integration/Logic_Apps.svg;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="600" width="64" height="70" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="legend" value="&lt;b&gt;Legend&lt;/b&gt;&#10;Solid line: synchronous HTTPS / SDK call&#10;Dashed line: AAD token / managed-identity auth&#10;Dotted line: optional / future hardening" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#999999;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="540" width="280" height="80" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_user_swa" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="user" target="swa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_user_swa_lbl" value="HTTPS" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="395" width="80" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_msal" style="endArrow=classic;dashed=1;html=1;rounded=0;" parent="1" source="msal" target="spaApp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_msal_lbl" value="MSAL sign-in" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="240" width="100" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_swa_func" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="swa" target="funcApp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_swa_func_lbl" value="/api/* (SWA proxy)" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="335" width="140" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_func_msi" style="endArrow=classic;dashed=1;html=1;rounded=0;" parent="1" source="funcApp" target="msi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_func_msi_lbl" value="DefaultAzureCredential" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="260" width="160" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_func_cosmos_sql" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.3;entryX=0;entryY=0.5;" parent="1" source="funcApp" target="cosmos" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_func_cosmos_sql_lbl" value="SQL data plane (key today, AAD-ready)" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="290" width="280" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_func_gremlin" style="endArrow=classic;dashed=1;html=1;rounded=0;exitX=1;exitY=0.7;entryX=0;entryY=0.7;" parent="1" source="funcApp" target="cosmos" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_func_gremlin_lbl" value="Gremlin WSS + AAD bearer" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="380" width="220" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_func_openai" style="endArrow=classic;html=1;rounded=0;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" parent="1" source="funcApp" target="openai" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_func_openai_lbl" value="embeddings (key)" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="510" width="160" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_func_foundry" style="endArrow=classic;dashed=1;html=1;rounded=0;exitX=0.7;exitY=1;entryX=0.5;entryY=0;" parent="1" source="funcApp" target="foundry" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_func_foundry_lbl" value="AIProjectClient + agent_reference" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="540" width="240" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_foundry_openai" style="endArrow=classic;html=1;rounded=0;" parent="1" source="foundry" target="openai" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_foundry_openai_lbl" value="gpt-4o-mini" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="660" width="100" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_foundry_cosmos" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0.5;entryY=1;" parent="1" source="agent" target="cosmos" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_foundry_cosmos_lbl" value="built-in Cosmos tools" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="510" width="180" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_foundry_graph" style="endArrow=classic;html=1;rounded=0;" parent="1" source="agent" target="msgraph" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_foundry_graph_lbl" value="MS Graph (Calendar)" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="660" width="160" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_agent_estimate" style="endArrow=classic;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;entryX=1;entryY=1;" parent="1" source="agent" target="funcApp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_agent_estimate_lbl" value="custom tool → /api/tools/estimate-hours" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="700" width="280" height="20" as="geometry"/>
+                </mxCell>
+
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

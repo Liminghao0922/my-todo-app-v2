@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "COSMOS_ENDPOINT": "https://localhost:8081",
+    "COSMOS_KEY": "local-emulator-key",
+    "COSMOS_AUTO_CREATE": "true",
+    "COSMOS_DATABASE_NAME": "todo-db",
+    "COSMOS_GREMLIN_ENDPOINT": "wss://<account>.gremlin.cosmos.azure.com:443/",
+    "COSMOS_GREMLIN_DATABASE": "todo-graph-db",
+    "COSMOS_GREMLIN_GRAPH": "todo-graph",
+    "FOUNDRY_PROJECT_ENDPOINT": "https://<your-project>.services.ai.azure.com/api/projects/<your-foundry-project>",
+    "FOUNDRY_AGENT_NAME": "todo-agent",
+    "FOUNDRY_AGENT_VERSION": "1",
+    "FOUNDRY_EMBEDDING_DEPLOYMENT": "text-embedding-3-small"
+  }
+}
